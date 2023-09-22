@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import zeroLogo from './zero.svg'
 import avivaLogo from './aviva-logo.svg'
-import VinFinder from './Components/VinFinder/VinFinder';
+import ModelIdFinder from './Components/ModelIdFinder/ModelIdFinder';
 
 function App() {
   return (
@@ -14,12 +14,12 @@ function App() {
           <img style={{height: "45px", marginBottom: "7px"}} src={zeroLogo} className="Zero-logo" alt="zero-logo" />
           </div>
           <div style={{float: "left", width: "40%"}}>
-            <h1 style={{float: "left"}}>VIN Finder</h1>
+            <h1 style={{float: "left"}}>Model ID Finder</h1>
           </div>
         </div>
       </header>
       <main>
-        <VinFinder />
+        <ModelIdFinder />
       </main>
     </div>
   );

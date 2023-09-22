@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
 
-const VinFinder = () => {
+const ModelIdFinder = () => {
 
     const [makes, setMakes] = useState<any[]>([])
     const [chosenMake, setChosenMake] = useState<string>()
+    
     useEffect(() => {
         fetch('http://localhost:10000/makes')
             .then(response => response.json())
@@ -12,12 +13,11 @@ const VinFinder = () => {
     }, [])
 
     useEffect(() => {
-        console.log(chosenMake)
         // TODO, what do we do from here?
     }, [chosenMake])
 
     return (
-        <div id="vin-finder">
+        <div id="modelid-finder">
             <label htmlFor="make-select">Choose a make:</label>
             <select id="make-select" onChange={(e) => setChosenMake(e.target.value)}>
                 {makes.map(make => <option key={make.MakeId} value={make.MakeName}>{make.MakeName}, {make.MakeId}</option>)}
@@ -26,4 +26,4 @@ const VinFinder = () => {
     )
 }
 
-export default VinFinder
+export default ModelIdFinder

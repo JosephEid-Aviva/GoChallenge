@@ -23,12 +23,12 @@
   color: #004FB6;
 }
 
-#vin-finder {
+#modelid-finder {
   padding: 20px;
   background-color: lightgray;
 }
 
-#vin-finder label {
+#modelid-finder label {
   margin-right: 5px;
 }
 
